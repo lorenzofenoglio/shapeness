@@ -1,0 +1,232 @@
+@prefix :      <https://www.epos-eu.org/epos-dcat-ap#> .
+@prefix schema: <http://schema.org/> .
+@prefix spdx:  <http://spdx.org/rdf/terms#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix locn:  <http://www.w3.org/ns/locn#> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix epos:  <https://www.epos-eu.org/epos-dcat-ap#> .
+@prefix adms:  <http://www.w3.org/ns/adms#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix cnt:   <http://www.w3.org/2011/content#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix http:  <http://www.w3.org/2006/http#> .
+@prefix dash:  <http://datashapes.org/dash#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<9a0218f7cbee63d8c77986d1eccd662d>
+        a                    hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label           "Maximum latitude" ;
+        rdfs:range           "xsd:float" ;
+        schema:defaultValue  "72.15281597251266" ;
+        schema:maxValue      "72.15281597251266" ;
+        schema:minValue      "18.367208771276694" ;
+        hydra:property       "epos:northernmostLatitude" ;
+        hydra:required       true ;
+        hydra:variable       "maxlatitude" .
+
+<454f6e7a4b8e6e4742401a58e6077aee>
+        a              dct:Location , dct:spatial ;
+        locn:geometry  "POLYGON((-62.31672829554828 18.367208771276694,-62.31672829554828 72.15281597251266,53.095980989549716 72.15281597251266,53.095980989549716 18.367208771276694,-62.31672829554828 18.367208771276694))"^^gsp:wktLiteral .
+
+<64ec14792366a73721e221da40c043ee>
+        a                  schema:affiliation , schema:Organization ;
+        schema:identifier  <https://www.epos-eu.org/epos-dcat-ap#PropertyValue/f12241fb-975e-47ca-bf24-7afdbf76c416> ;
+        schema:legalName   "Geološki zavod Slovenije" .
+
+<d580fcf19988b7cd42a73d0d7aeed190>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "WMS version" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "1.3.0" ;
+        http:paramValue      "1.3.0" ;
+        hydra:required       true ;
+        hydra:variable       "version" .
+
+<https://www.epos-eu.org/epos-dcat-ap/Person/MatijaKrivic/contactPoint>
+        a                         schema:contactPoint , dcat:contactPoint , schema:ContactPoint ;
+        schema:availableLanguage  "en" ;
+        schema:contactType        "manager" ;
+        schema:email              "matija.krivic@geo-zs.si" .
+
+<451e42bc97701e90e661fb29edffe114>
+        a              dct:Location , dct:spatial ;
+        locn:geometry  "POLYGON((-62.31672829554828 18.367208771276694,-62.31672829554828 72.15281597251266,53.095980989549716 72.15281597251266,53.095980989549716 18.367208771276694,-62.31672829554828 18.367208771276694))"^^gsp:wktLiteral .
+
+<https://www.epos-eu.org/epos-dcat-ap/Dataset/Distribution/EGDIINSPIREandOneGeologysurfacegeology>
+        a                dcat:Distribution , dcat:distribution ;
+        dct:conformsTo   <https://www.epos-eu.org/epos-dcat-ap/Dataset/Distribution/WS/EGDIINSPIREandOneGeologysurfacegeology> ;
+        dct:description  "EGDI (onegeology-europe harvested) WMS for INSPIRE dataset on surface geology: geologic units and geologic faults. Based on onegeology-europe data" ;
+        dct:format       "http://publications.europa.eu/resource/authority/file-type/PNG"^^xsd:anyURI ;
+        dct:identifier   "https://www.epos-eu.org/epos-dcat-ap/Dataset/Distribution/EGDIINSPIREandOneGeologysurfacegeology" ;
+        dct:title        "EGDI INSPIRE and OneGeology surface geology" ;
+        dct:type         "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI ;
+        dcat:accessURL   <https://peridot.geo-zs.si/EGDI/ows?SERVICE=WMS&SERVICE=WMS> .
+
+<11c8fdb0fe8ed23b02d63818c8655437>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Spatial Reference System" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "EPSG:4326" ;
+        http:paramValue      "EPSG:4326" ;
+        hydra:required       true ;
+        hydra:variable       "crs" .
+
+<https://www.epos-eu.org/epos-dcat-ap#PropertyValue/f12241fb-975e-47ca-bf24-7afdbf76c416>
+        a                  schema:identifier , schema:PropertyValue ;
+        schema:propertyID  "isni" ;
+        schema:value       "test" .
+
+<e73ebc73523c470e8af0a9fcab8bdd1b>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Layers" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "Onegeo_age" ;
+        http:paramValue      "EGDI_1M_INSPIRE_geolUnits:onegeo" , "Onegeo_age" , "EGDI_1M_INSPIRE_geolUnits:onegeo_opti1000_shp" , "EGDI_1M_INSPIRE_geolUnits:onegeo_1000_gpgk" , "EGDI_1M_INSPIRE_geolUnits:EGDI_GE_GeologicUnit_EN_1M_Surface_Lithology" , "EGDI_1M_INSPIRE_geolUnits:onegeo_1000_mw" , "Onegeo_litology" , "EGDI_1M_INSPIRE_geolUnits:onegeo_10_mw" , "EGDI_1M_INSPIRE_geolUnits:onegeo_100_mw" ;
+        hydra:required       true ;
+        hydra:variable       "layers" .
+
+<6a05334ddedb70cc2ad469cbcd6ff68a>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Minimum longitude" ;
+        rdfs:range           "xsd:float" ;
+        schema:defaultValue  "-62.31672829554828" ;
+        schema:maxValue      "53.095980989549716" ;
+        schema:minValue      "-62.31672829554828" ;
+        hydra:property       "epos:westernmostLongitude" ;
+        hydra:required       true ;
+        hydra:variable       "minlongitude" .
+
+<e3379b6eeb6c879365e5dc15a6d39755>
+        a                       schema:address , schema:PostalAddress ;
+        schema:addressCountry   "Slovenia" ;
+        schema:addressLocality  "Ljubljana" ;
+        schema:postalCode       "1000" ;
+        schema:streetAddress    "Dimičeva ulica 14" .
+
+<b4ba0001d3560c7d6d0e94d72197deee>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Height of the output map" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "811" ;
+        http:paramValue      "811" ;
+        hydra:required       true ;
+        hydra:variable       "height" .
+
+<https://www.epos-eu.org/epos-dcat-ap#Identifier/c29f7c5b-6e5e-4f69-b1bf-51e62f5405c3>
+        a                  adms:Identifier , adms:identifier ;
+        skos:notation      "WP12-DDSS-008" ;
+        adms:schemeAgency  "DDSS-ID" .
+
+<https://www.epos-eu.org/epos-dcat-ap/Dataset/EGDIINSPIREandOneGeologysurfacegeology>
+        a                  dcat:Dataset ;
+        dct:description    "EGDI (onegeology-europe harvested) WMS for INSPIRE dataset on surface geology: geologic units and geologic faults. Based on onegeology-europe data" ;
+        dct:identifier     "https://www.epos-eu.org/epos-dcat-ap/Dataset/EGDIINSPIREandOneGeologysurfacegeology" ;
+        dct:spatial        <454f6e7a4b8e6e4742401a58e6077aee> ;
+        dct:title          "EGDI INSPIRE and OneGeology surface geology" ;
+        adms:identifier    <https://www.epos-eu.org/epos-dcat-ap#Identifier/c29f7c5b-6e5e-4f69-b1bf-51e62f5405c3> ;
+        dcat:contactPoint  <https://www.epos-eu.org/epos-dcat-ap/Person/MatijaKrivic/contactPoint> ;
+        dcat:distribution  <https://www.epos-eu.org/epos-dcat-ap/Dataset/Distribution/EGDIINSPIREandOneGeologysurfacegeology> ;
+        dcat:keyword       "WMS" , "GEOSERVER" , "WFS" .
+
+<94746bc8bf722b6318912b3b6d3f0e00>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Width of the output map" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "1536" ;
+        http:paramValue      "1536" ;
+        hydra:required       true ;
+        hydra:variable       "width" .
+
+<10235b2570071e2c998781e399a9f70b>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Request type" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "GetMap" ;
+        http:paramValue      "GetMap" ;
+        hydra:required       true ;
+        hydra:variable       "request" .
+
+<f85be81e8284d51358ccf60d8b68e3bc>
+        a               hydra:IriTemplate , hydra:property ;
+        hydra:mapping   <96dfe27cfb660829ab14f237cd2dcdb7> , <65755df0ae3314d907165976cb14ab54> , <c714cf8f2893dba30f622179c56cafda> , <d580fcf19988b7cd42a73d0d7aeed190> , <b4ba0001d3560c7d6d0e94d72197deee> , <9a0218f7cbee63d8c77986d1eccd662d> , <e73ebc73523c470e8af0a9fcab8bdd1b> , <94746bc8bf722b6318912b3b6d3f0e00> , <11c8fdb0fe8ed23b02d63818c8655437> , <10235b2570071e2c998781e399a9f70b> , <9503a197e03da5fafcafc3b056531e16> , <6a05334ddedb70cc2ad469cbcd6ff68a> ;
+        hydra:template  "https://peridot.geo-zs.si/EGDI/ows?SERVICE=WMS&SERVICE=WMS{&version, request, layers, crs, format, width, height, styles}&bbox={minlatitude,minlongitude,maxlatitude,maxlongitude}" .
+
+<https://www.epos-eu.org/epos-dcat-ap/Person/MatijaKrivic>
+        a                    schema:Person ;
+        schema:address       <e3379b6eeb6c879365e5dc15a6d39755> ;
+        schema:affiliation   <64ec14792366a73721e221da40c043ee> ;
+        schema:contactPoint  <https://www.epos-eu.org/epos-dcat-ap/Person/MatijaKrivic/contactPoint> ;
+        schema:email         "matija.krivic@geo-zs.si" ;
+        schema:familyName    "Krivic" ;
+        schema:givenName     "Matija" ;
+        schema:identifier    "https://www.epos-eu.org/epos-dcat-ap/Person/MatijaKrivic" ;
+        schema:telephone     "012809700" .
+
+<c714cf8f2893dba30f622179c56cafda>
+        a                    hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label           "Output format" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "image/png" ;
+        http:paramValue      "text/html; subtype=openlayers2" , "image/tiff8" , "text/html; subtype=openlayers3" , "application/pdf" , "application/rss+xml" , "application/vnd.google-earth.kmz" , "application/json;type=utfgrid" , "image/geotiff" , "image/geotiff8" , "image/svg+xml" , "application/vnd.google-earth.kml+xml;mode=networklink" , "image/png; mode=8bit" , "image/vnd.jpeg-png8" , "image/jpeg" , "image/vnd.jpeg-png" , "application/atom+xml" , "application/vnd.google-earth.kml+xml" , "image/png" , "text/html; subtype=openlayers" , "image/tiff" , "image/gif" ;
+        hydra:property       "schema:encodingFormat" ;
+        hydra:required       true ;
+        hydra:variable       "format" .
+
+<https://peridot.geo-zs.si/EGDI/ows?SERVICE=WMS&SERVICE=WMS>
+        a               hydra:Operation , hydra:supportedOperation , dcat:accessURL ;
+        hydra:method    "GET" ;
+        hydra:property  <f85be81e8284d51358ccf60d8b68e3bc> ;
+        hydra:returns   "image/png" .
+
+<65755df0ae3314d907165976cb14ab54>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Minimum latitude" ;
+        rdfs:range           "xsd:float" ;
+        schema:defaultValue  "18.367208771276694" ;
+        schema:maxValue      "72.15281597251266" ;
+        schema:minValue      "18.367208771276694" ;
+        hydra:property       "epos:southernmostLatitude" ;
+        hydra:required       true ;
+        hydra:variable       "minlatitude" .
+
+<https://www.epos-eu.org/epos-dcat-ap/Dataset/Distribution/WS/EGDIINSPIREandOneGeologysurfacegeology>
+        a                         epos:WebService , dct:conformsTo ;
+        dct:spatial               <451e42bc97701e90e661fb29edffe114> ;
+        schema:description        "EGDI (onegeology-europe harvested) WMS for INSPIRE dataset on surface geology: geologic units and geologic faults. Based on onegeology-europe data" ;
+        schema:identifier         "https://www.epos-eu.org/epos-dcat-ap/Dataset/Distribution/WS/EGDIINSPIREandOneGeologysurfacegeology" ;
+        schema:keywords           "WFS" , "GEOSERVER" , "WMS" ;
+        schema:name               "EGDI INSPIRE and OneGeology surface geology" ;
+        dcat:contactPoint         <https://www.epos-eu.org/epos-dcat-ap/Person/MatijaKrivic/contactPoint> ;
+        hydra:entrypoint          "https://peridot.geo-zs.si/EGDI/ows?SERVICE=WMS&request=GetCapabilities"^^xsd:anyURI ;
+        hydra:supportedOperation  <https://peridot.geo-zs.si/EGDI/ows?SERVICE=WMS&SERVICE=WMS> .
+
+<96dfe27cfb660829ab14f237cd2dcdb7>
+        a                    hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label           "Symbols style" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "CGI-inspire-lithologyTextURI.sld" ;
+        http:paramValue      "CGI-INSPIRE-lithology-100" , "CGI-inspire-AgeTextURI" , "CGI-inspire-lithologyTextURI.sld" , "CGI-inspire-AgeTextURI-CGMW_opti1000_shp" , "CGI-INSPIRE-age-1000" , "CGI-INSPIRE-lithology-0" , "CGI-INSPIRE-age-100" , "CGI-INSPIRE-lithology-1000" , "CGI-INSPIRE-lithology-10" ;
+        hydra:required       true ;
+        hydra:variable       "styles" .
+
+<9503a197e03da5fafcafc3b056531e16>
+        a                    hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label           "Maximum longitude" ;
+        rdfs:range           "xsd:float" ;
+        schema:defaultValue  "53.095980989549716" ;
+        schema:maxValue      "53.095980989549716" ;
+        schema:minValue      "-62.31672829554828" ;
+        hydra:property       "epos:easternmostLongitude" ;
+        hydra:required       true ;
+        hydra:variable       "maxlongitude" .
